@@ -14,3 +14,6 @@ PartyB
 PartyC
 
 Because data is only propagated on a need-to-know basis, any IOUs agreed between PartyA and PartyB become “shared facts” between PartyA and PartyB only. PartyC won’t be aware of these IOUs.
+
+
+Each network has a *network map service* that maps each well-known *node identity* (represent the node in transactions) to an *IP address*. These IP addresses are used for messaging between nodes.
