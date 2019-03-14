@@ -32,16 +32,25 @@ CorDapps usually define at least three things:
 
 IOUd CorDapp will define the following components:
 
-### IOUState
+### State
 
-Our state will be the IOUState, representing an IOU. It will contain the IOU’s value, its lender and its borrower. We can visualize IOUState as follows:
+Our state will be the **IOUState**, representing an IOU. It will contain the IOU’s value, its lender and its borrower. We can visualize IOUState as follows:
 
                         IOU_STATE
 
             PARTICIPANTS            PROPERTIES
-            Alice                   **Lender:** Alice
+            Alice                   __Lender:__ Alice
             Bob                     **Borrower:** Bob
                                     **Amount:** 10
 
-g
+
+### Flow
+
+Our flow will be the **IOUFlow**. This flow will completely automate the process of issuing a new IOU onto a ledger. It has the following steps:
+
+
+
+
+
+
             
