@@ -38,7 +38,7 @@ State will be the **IOUState**, representing an IOU. It will contain the IOU’s
                         IOU_STATE
 
             PARTICIPANTS            PROPERTIES
-            Alice                   __Lender:__ Alice
+            Alice                   **Lender:** Alice
             Bob                     **Borrower:** Bob
                                     **Amount:** 10
 
@@ -47,9 +47,9 @@ State will be the **IOUState**, representing an IOU. It will contain the IOU’s
 
 Flow will be the **IOUFlow**. This flow will completely automate the process of issuing a new IOU onto a ledger. It has the following steps:
 
-**INITIATOR** CREATE TX -> SIGN TX -> RECORD TX -> SEND (TX + BORRWER SIG)  ->               END
+**INITIATOR**   CREATE TX   ->  SIGN TX   ->  RECORD TX   ->  SEND (TX + BORRWER SIG) ->                END
 
-**ACCEPTOR**                                                                -> RECORD TX  -> END
+**ACCEPTOR**                                                                          -> RECORD TX  ->  END
 
 ### Contract
 
