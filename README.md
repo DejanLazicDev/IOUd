@@ -5,7 +5,7 @@
 
 This test example is going to demonstrate a simple CorDapp that will allow nodes on the blockchain to agree new IOUs with each other, as long as they obey the following contract rules:
 
-- The IOU’s value is strictly positive
+- The IOU's value is strictly positive
 - A node is not trying to issue an IOU to itself
 
 We will deploy and run the CorDapp on four test nodes:
@@ -15,7 +15,7 @@ PartyA
 PartyB
 PartyC
 
-Because data is only propagated on a need-to-know basis, any IOUs agreed between PartyA and PartyB become "shared facts" between PartyA and PartyB only. PartyC won’t be aware of these IOUs.
+Because data is only propagated on a need-to-know basis, any IOUs agreed between PartyA and PartyB become "shared facts" between PartyA and PartyB only. PartyC won't be aware of these IOUs.
 
 All communication between nodes is *point-to-point* (data is shared only on a **need-to-know** basis).
 
@@ -43,7 +43,7 @@ Besides, our State will also need properties to track the relevant features of t
 
 #### Implementation
 
-State will be the **IOUState**, representing an IOU. It will contain the IOU’s value, its lender and its borrower. We can visualize IOUState as follows:
+State will be the **IOUState**, representing an IOU. It will contain the IOU's value, its lender and its borrower:
 
                         IOU_STATE
 
