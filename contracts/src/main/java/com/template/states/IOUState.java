@@ -9,10 +9,6 @@ import net.corda.core.identity.Party;
 import java.util.Arrays;
 import java.util.List;
 
-// *********
-// * State *
-// *********
-
 @BelongsToContract(TemplateContract.class)
 public class IOUState implements ContractState {
     private final int value;
