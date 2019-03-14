@@ -52,6 +52,16 @@ State will be **IOUState**, representing an IOU. It will contain the IOU's value
             Bob                     Borrower: Bob
                                     Amount: 10
 
+### Commands
+
+**Commands** serve two functions:
+
+1. They indicate the intent of a transaction - issuance, transfer, redemption, revocation. This is crucial in contracts
+2. They allow us to define the required signers for the transaction. IOU creation might require signatures from the lender only, whereas the transfer of an IOU might require signatures from both the IOU's borrower and lender
+
+Each Command contains a command *type* plus a *list of public keys*. 
+We use the pre-defined **TemplateContract.Action** as our command type, and we list the *lender* as the only public key. This means that for the transaction to be valid, the lender is required to sign the transaction.
+
 ### Flow
 
 A **flow** encodes a *sequence of steps* that a node can perform to achieve a specific *ledger update*. By installing new flows on a node, we allow the node to handle new business processes. 
