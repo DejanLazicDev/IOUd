@@ -3,20 +3,19 @@
 
 ## Introduction
 
-The example CorDapp allows nodes to agree IOUs with each other, as long as they obey the following contract rules:
+This test example is going to demonstrate a simple CorDapp that will allow nodes on the blockchain to agree new IOUs with each other, as long as they obey the following contract rules:
 
 - The IOU’s value is strictly positive
 - A node is not trying to issue an IOU to itself
 
 We will deploy and run the CorDapp on four test nodes:
 
-Notary, which runs a notary service
+Notary (runs a notary service)
 PartyA
 PartyB
 PartyC
 
 Because data is only propagated on a need-to-know basis, any IOUs agreed between PartyA and PartyB become “shared facts” between PartyA and PartyB only. PartyC won’t be aware of these IOUs.
-
 
 All communication between nodes is *point-to-point* (data is shared only on a **need-to-know** basis).
 
@@ -34,7 +33,7 @@ IOUd CorDapp will define the following components:
 
 ### State
 
-Our state will be the **IOUState**, representing an IOU. It will contain the IOU’s value, its lender and its borrower. We can visualize IOUState as follows:
+State will be the **IOUState**, representing an IOU. It will contain the IOU’s value, its lender and its borrower. We can visualize IOUState as follows:
 
                         IOU_STATE
 
@@ -46,13 +45,15 @@ Our state will be the **IOUState**, representing an IOU. It will contain the IOU
 
 ### Flow
 
-Our flow will be the **IOUFlow**. This flow will completely automate the process of issuing a new IOU onto a ledger. It has the following steps:
+Flow will be the **IOUFlow**. This flow will completely automate the process of issuing a new IOU onto a ledger. It has the following steps:
 
-**INITIATOR** CREATE TX -> SIGN TX -> RECORD TX
+**INITIATOR** CREATE TX -> SIGN TX -> RECORD TX -> SEND (TX + BORRWER SIG)  ->               END
 
-**ACCEPTOR**
+**ACCEPTOR**                                                                -> RECORD TX  -> END
 
+### Contract
 
+Default **TemplateContract** will be used. We will update it to create a fully-fledged IOUContract in the next tutorial.
 
 
 
