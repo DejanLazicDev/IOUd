@@ -15,7 +15,7 @@ PartyA
 PartyB
 PartyC
 
-Because data is only propagated on a need-to-know basis, any IOUs agreed between PartyA and PartyB become “shared facts” between PartyA and PartyB only. PartyC won’t be aware of these IOUs.
+Because data is only propagated on a need-to-know basis, any IOUs agreed between PartyA and PartyB become "shared facts" between PartyA and PartyB only. PartyC won’t be aware of these IOUs.
 
 All communication between nodes is *point-to-point* (data is shared only on a **need-to-know** basis).
 
