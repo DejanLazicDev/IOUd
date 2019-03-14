@@ -70,6 +70,15 @@ INITIATOR:  CREATE TX   ->  SIGN TX   ->  RECORD TX   ->  SEND (TX + BORRWER SIG
 ACCEPTOR:                                                                         -> RECORD TX  ->  END
 </pre>
 
+The goal of our flow will be to orchestrate an IOU issuance transaction. Transactions in Corda are the atomic units of change that update the ledger. Each transaction is a proposal to mark zero or more existing states as historic (the inputs), while creating zero or more new states (the outputs).
+
+The process of creating and applying this transaction to a ledger will be conducted by the IOU’s lender, and will require the following steps:
+
+Building the transaction proposal for the issuance of a new IOU onto a ledger
+1. Signing the transaction proposal
+2. Recording the transaction and sending it to the IOU’s borrower so that they can record it too
+3. We also need the borrower to receive the transaction and record it for itself. At this stage, we do not require the borrower to approve and sign IOU issuance transactions. 
+
 ### Contract
 
 Default **TemplateContract** will be used. We will update it to create a fully-fledged IOUContract in the next tutorial.
