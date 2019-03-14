@@ -25,9 +25,9 @@ Each network has a **network map service** that maps each well-known **node iden
 
 CorDapps usually define at least three things:
 
-- States - the (possibly shared) facts that are written to the ledger
-- Flows - the procedures for carrying out specific ledger updates
-- Contracts - the constraints governing how states of a given type can evolve over time
+- **States** - (possibly shared) *facts* that are written to the ledger
+- **Flows** - *procedures* for carrying out specific ledger updates
+- **Contracts** - *constraints* governing how states of a given type can evolve over time
 
 IOUd CorDapp will define the following components:
 
@@ -48,9 +48,9 @@ State will be the **IOUState**, representing an IOU. It will contain the IOU’s
                         IOU_STATE
 
             PARTICIPANTS            PROPERTIES
-            Alice                   **Lender:** Alice
-            Bob                     **Borrower:** Bob
-                                    **Amount:** 10
+            Alice                   Lender: Alice
+            Bob                     Borrower: Bob
+                                    Amount: 10
 
 
 ### Flow
