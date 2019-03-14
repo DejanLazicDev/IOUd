@@ -1,7 +1,7 @@
 # IOUd
 **I O(we) Y(ou) d(e)**
 
-##Introduction
+## Introduction
 
 The example CorDapp allows nodes to agree IOUs with each other, as long as they obey the following contract rules:
 
@@ -32,16 +32,16 @@ CorDapps usually define at least three things:
 
 IOUd CorDapp will define the following components:
 
-**IOUState**
+### IOUState
 
 Our state will be the IOUState, representing an IOU. It will contain the IOU’s value, its lender and its borrower. We can visualize IOUState as follows:
 
                         IOU_STATE
 
             PARTICIPANTS            PROPERTIES
-                                    Lender
-                                    Borrower
-                                    Amount
+            Alice                   **Lender:** Alice
+            Bob                     **Borrower:** Bob
+                                    **Amount:** 10
 
 g
             
