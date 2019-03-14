@@ -1,5 +1,7 @@
 # IOUd
-## I O(we) Y(ou) d(e)
+**I O(we) Y(ou) d(e)**
+
+##Introduction
 
 The example CorDapp allows nodes to agree IOUs with each other, as long as they obey the following contract rules:
 
@@ -20,6 +22,7 @@ All communication between nodes is *point-to-point* (data is shared only on a **
 
 Each network has a **network map service** that maps each well-known **node identity** (represents the node in transactions) to an **IP address**. These IP addresses are used for messaging between nodes.
 
+## Design
 
 CorDapps usually define at least three things:
 
@@ -36,5 +39,9 @@ Our state will be the IOUState, representing an IOU. It will contain the IOU’s
                         IOU_STATE
 
             PARTICIPANTS            PROPERTIES
-            
+                                    Lender
+                                    Borrower
+                                    Amount
+
+g
             
