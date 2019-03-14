@@ -33,5 +33,8 @@ IOUd CorDapp will define the following components:
 
 Our state will be the IOUState, representing an IOU. It will contain the IOU’s value, its lender and its borrower. We can visualize IOUState as follows:
 
-            IOU_STATE
+                        IOU_STATE
 
+            PARTICIPANTS            PROPERTIES
+            
+            
