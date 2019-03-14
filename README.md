@@ -60,6 +60,8 @@ The flow we define will allow a node to issue a State onto the ledger.
 
 #### Implementation
 
+The goal of our flow will be to *orchestrate an IOU issuance transaction*. **Transactions** in Corda are the *atomic* units of change that *update the ledger*. Each transaction is a proposal to *mark* zero or more *existing* states as **historic** (**inputs**), while *creating* zero or more *new states* (**outputs**).
+
 Flow will be **IOUFlow**. This flow will completely automate the process of issuing a new IOU onto a ledger. It has the following steps:
 
 <pre>
