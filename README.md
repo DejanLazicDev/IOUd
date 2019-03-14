@@ -19,3 +19,19 @@ Because data is only propagated on a need-to-know basis, any IOUs agreed between
 All communication between nodes is *point-to-point* (data is shared only on a **need-to-know** basis).
 
 Each network has a **network map service** that maps each well-known **node identity** (represents the node in transactions) to an **IP address**. These IP addresses are used for messaging between nodes.
+
+
+CorDapps usually define at least three things:
+
+- States - the (possibly shared) facts that are written to the ledger
+- Flows - the procedures for carrying out specific ledger updates
+- Contracts - the constraints governing how states of a given type can evolve over time
+
+IOUd CorDapp will define the following components:
+
+**IOUState**
+
+Our state will be the IOUState, representing an IOU. It will contain the IOU’s value, its lender and its borrower. We can visualize IOUState as follows:
+
+            IOU_STATE
+
