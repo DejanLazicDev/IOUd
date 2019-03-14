@@ -33,6 +33,8 @@ IOUd CorDapp will define the following components:
 
 ### State
 
+In Corda, *shared facts* on the blockchain are represented as states.
+
 State will be the **IOUState**, representing an IOU. It will contain the IOU’s value, its lender and its borrower. We can visualize IOUState as follows:
 
                         IOU_STATE
