@@ -43,7 +43,7 @@ Besides, our State will also need properties to track the relevant features of t
 
 #### Implementation
 
-State will be the **IOUState**, representing an IOU. It will contain the IOU's value, its lender and its borrower:
+State will be **IOUState**, representing an IOU. It will contain the IOU's value, its lender and its borrower:
 
                         IOU_STATE
 
@@ -52,10 +52,15 @@ State will be the **IOUState**, representing an IOU. It will contain the IOU's v
             Bob                     Borrower: Bob
                                     Amount: 10
 
-
 ### Flow
 
-Flow will be the **IOUFlow**. This flow will completely automate the process of issuing a new IOU onto a ledger. It has the following steps:
+A **flow** encodes a *sequence of steps* that a node can perform to achieve a specific *ledger update*. By installing new flows on a node, we allow the node to handle new business processes. 
+
+The flow we define will allow a node to issue a State onto the ledger.
+
+#### Implementation
+
+Flow will be **IOUFlow**. This flow will completely automate the process of issuing a new IOU onto a ledger. It has the following steps:
 
 <pre>
 INITIATOR:  CREATE TX   ->  SIGN TX   ->  RECORD TX   ->  SEND (TX + BORRWER SIG) ->                END
